@@ -14,7 +14,7 @@ FN_1 = config.get_FN_1()
 FN_2 = config.get_FN_2()
 FN_3 = config.get_FN_3()
 
-file_path = 'E:\ResearchCode\ThreeObjects\V86\DataFile'
+file_path = 'E:\ResearchCode\ThreeObjects\V85\DataFile'
 file_list = os.listdir(file_path)
 
 w = [] # all the weight values
@@ -26,7 +26,7 @@ w = np.array(w)
 print(len(w))
 
 w_testing = w
-sample_num = 50
+sample_num = 89
 w_test = []
 f_test = []
 for i in range(sample_num):
@@ -43,5 +43,5 @@ for i in range(sample_num):
 w_test = np.array(w_test)
 f_test = np.array(f_test)
 
-io.savemat('w_sample_cons.mat',{'w_sample_cons':w_test})
-io.savemat('f_sample_cons.mat',{'f_sample_cons':f_test})
+io.savemat('w_sample_weights_89.mat',{'w_sample_weights_89':w_test})
+io.savemat('f_sample_weights_89.mat',{'f_sample_weights_89':f_test})

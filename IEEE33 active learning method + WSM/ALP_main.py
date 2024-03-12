@@ -64,7 +64,9 @@ if __name__ == '__main__':
 
     # Define the ANN model for objective functions
     model = tf.keras.models.Sequential()
-    model.add(tf.keras.layers.Dense(332, activation='relu', input_shape=(w_train.shape[1],)))
+    model.add(tf.keras.layers.Dense(500, activation='relu', input_shape=(w_train.shape[1],)))
+    model.add(tf.keras.layers.Dense(500, activation='relu', input_shape=(w_train.shape[1],)))
+    model.add(tf.keras.layers.Dense(375, activation='relu', input_shape=(w_train.shape[1],)))
     model.add(tf.keras.layers.Dense(3, activation='linear'))
     model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=LearningRate), loss='mean_squared_error',metrics=['mae'])
 

@@ -549,7 +549,7 @@ def main_fun(obj_index,w1,w2,ite):
         model.setObjective(v_au.sum()/N) """
     #model.Params.DualReductions = 1
 
-    model.setParam('MIPGap', 0.001)
+    model.setParam('MIPGap', 0.05)
     model.setParam('TimeLimit', 72000)
     # model.setParam('NoRelHeurTime', 5000)
 

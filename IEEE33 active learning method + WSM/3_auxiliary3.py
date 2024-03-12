@@ -88,25 +88,25 @@ shap.summary_plot(shap_values=exam_x_shap[current_label.value], features=df_feat
 current_label = widgets.Dropdown(options=tuple_of_labels, value=2, description="Select Label:")
 shap.summary_plot(shap_values=exam_x_shap[current_label.value], features=df_features)
 
-exam_x = []
-num_sample = 10000
-for i in range(num_sample):
-    x1 = random.uniform(0,1)
-    x2 = random.uniform(0,1-x1)
-    x3 = 1-x1-x2
-    exam_x.append([x1,x2,x3])
-exam_x = np.array(exam_x)
-exam_y = model_3D.predict(exam_x)
+# exam_x = []
+# num_sample = 10000
+# for i in range(num_sample):
+#     x1 = random.uniform(0,1)
+#     x2 = random.uniform(0,1-x1)
+#     x3 = 1-x1-x2
+#     exam_x.append([x1,x2,x3])
+# exam_x = np.array(exam_x)
+# exam_y = model_3D.predict(exam_x)
 
-df_features = pd.DataFrame(data=exam_x,columns=feature_cols)
-df_labels = pd.DataFrame(data=exam_y,columns=label_cols)
-exam_x_shap = explainer.shap_values(X=df_features)
+# df_features = pd.DataFrame(data=exam_x,columns=feature_cols)
+# df_labels = pd.DataFrame(data=exam_y,columns=label_cols)
+# exam_x_shap = explainer.shap_values(X=df_features)
 
-current_label = widgets.Dropdown(options=tuple_of_labels, value=0, description="Select Label:")
-shap.summary_plot(shap_values=exam_x_shap[current_label.value], features=df_features)
+# current_label = widgets.Dropdown(options=tuple_of_labels, value=0, description="Select Label:")
+# shap.summary_plot(shap_values=exam_x_shap[current_label.value], features=df_features)
 
-current_label = widgets.Dropdown(options=tuple_of_labels, value=1, description="Select Label:")
-shap.summary_plot(shap_values=exam_x_shap[current_label.value], features=df_features)
+# current_label = widgets.Dropdown(options=tuple_of_labels, value=1, description="Select Label:")
+# shap.summary_plot(shap_values=exam_x_shap[current_label.value], features=df_features)
 
-current_label = widgets.Dropdown(options=tuple_of_labels, value=2, description="Select Label:")
-shap.summary_plot(shap_values=exam_x_shap[current_label.value], features=df_features)
+# current_label = widgets.Dropdown(options=tuple_of_labels, value=2, description="Select Label:")
+# shap.summary_plot(shap_values=exam_x_shap[current_label.value], features=df_features)

@@ -3,11 +3,12 @@ import os
 import matplotlib.pyplot as plt
 import random
 
-file_path = 'E:\ResearchCode\ThreeObjects\V72\DataFile'
+file_path = 'E:\CodeFile\ThreeObjective\V73\DataFile'
 file_list = os.listdir(file_path)
 
 w = [] # all the weight values
 for item in file_list:
+    print(item)
     w1 = float(item.split('_')[3])
     w2 = float(item.split('_')[5])
     w.append([w1,w2,1-w1-w2])

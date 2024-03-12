@@ -11,7 +11,7 @@ def main_2():
     # this function is used for e-constraint method
     w = []
 
-    N_random = 30
+    N_random = 100
     for i in range(N_random):
         w1 = random.uniform(0,1)
         w2 = random.uniform(0,1)

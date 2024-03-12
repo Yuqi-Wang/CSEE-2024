@@ -14,7 +14,7 @@ w_set = np.load('3w_train_ws_woPC_OLTC_'+str(initial_num)+'.npy') # all the thre
 
 
 # Split the dataset into train and test sets
-w_train, w_test, f_train, f_test = train_test_split(w_set, f_set, test_size=0.2)
+w_train, w_test, f_train, f_test = train_test_split(w_set, f_set, test_size=0.3)
 np.save('3f_Bay_train_ws_woPC_OLTC_'+'.npy',f_train)
 np.save('3w_Bay_train_ws_woPC_OLTC_'+'.npy',w_train)
 np.save('3f_Bay_test_ws_woPC_OLTC_'+'.npy',f_test)

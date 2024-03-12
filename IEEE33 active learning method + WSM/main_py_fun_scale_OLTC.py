@@ -102,9 +102,9 @@ M = 1000000
 
 # life cycle carbon emission
 # life_PV = 1.63 / 0.26 * (185+20) / 17 * 3 # kg/(台*年), 185是production，20是recycling
-life_PV = 0 * 1000000/230*180 * 100 # kg/(100 MW), 先用1MW除以230获得对应的面积，再乘以180（每平方米生产制造时的碳排放），最后乘以100是换算成kg/(100 MW)
-life_ESS = 0 * 50 * 100 # kg/(100 MWh)
-life_ESS_p = 0 * 50 * 100 # kg/(100 MWh)
+life_PV = 1000000/230*180 * 100 # kg/(100 MW), 先用1MW除以230获得对应的面积，再乘以180（每平方米生产制造时的碳排放），最后乘以100是换算成kg/(100 MW)
+life_ESS = 50 * 100 # kg/(100 MWh)
+life_ESS_p = 50 * 100 # kg/(100 MWh)
 
 hour_max = 5
 hour_min = 1
@@ -568,7 +568,7 @@ else:
 
 #model.Params.DualReductions = 1
 
-model.setParam('MIPGap', 0.001)
+model.setParam('MIPGap', 0.05)
 # model.setParam('NoRelHeurTime', 5000)
 
 model.optimize()

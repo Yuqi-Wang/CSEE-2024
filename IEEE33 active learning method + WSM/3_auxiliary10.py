@@ -14,11 +14,11 @@ c_e_b = c_e_b.reshape((1,1,24))
 c_e_s = np.zeros((1,1,24)) # the electricity price for sell
 for i in range(24):
     c_e_s[0,0,i] = c_e_b[0,0,i] * 0.7
-ess_num = 3
-pv_num = 6
+ess_num = 2
+pv_num = 3
 c_ess_op = 0.00027*1000*100 # the operation cost of ess unit is $/kWh，乘以1000是将单位换算为$/MWh，再乘以100是将单位换算为$/100MWh
 c_pv_cut = 0.033*1000*100 # the punishment on pv deserting, and the unit is $/kWh，乘以1000是将单位换算为$/MWh，再乘以100是将单位换算为$/100MWh
-N = 20 # 随机场景的数量
+N = 5 # 随机场景的数量
 p_pv = io.loadmat('p_pv.mat')['p_pv'][0:pv_num,0:N,:] # the value is in p.u. value and represents the fluctuation, the power factor of PV is 0.9，滞后
 
 relax = config.get_relax()
@@ -48,11 +48,11 @@ op_cost = np.zeros([total_num,1])
 
 count = 0
 for i in range(total_num):
-    if (round(w_train[i,0],8) != 0.85486488):
+    if (round(w_train[i,0],8) != 0.27410855):
         print('w is :',w_train[i,:])
         w_final_train_x[count,:] = w_train[i,:]
         
-        result_data = np.load('.\DataFile2\\result_obj'+str(obj)+'_w1_'+str(round(w_train[i,0],8))+'_w2_'+str(round(w_train[i,1],8))+'_pv'+str(P_pv_max)+'.npz')
+        result_data = np.load('.\DataFile\\result_obj'+str(obj)+'_w1_'+str(round(w_train[i,0],8))+'_w2_'+str(round(w_train[i,1],8))+'_pv'+str(P_pv_max)+'.npz')
         pv_case[count,:] = result_data['pv_cap'].sum() * 100
         ene_case[count,:] = result_data['E_ess'].sum() * 100
         pei_case[count,:] = result_data['p_ess'].sum() * 100

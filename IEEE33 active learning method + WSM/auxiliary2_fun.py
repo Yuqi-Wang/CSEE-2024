@@ -6,7 +6,7 @@ import config
 #根据保存的优化结果计算三个目标函数各自的值
 
 def obj_values(w1,w2):
-     obj = 2
+     obj = 4
      pv_bus = [9,22,29]
      pv_num = len(pv_bus)
      ess_bus = [4,30]

@@ -3,13 +3,13 @@ class global_var:
     beta = 0.5
     ur = 0.05
 
-    FU_1 = -145765829.581922000000 
-    FU_2 = -6803866.868420850000 
-    FU_3 = 5.060261739403 
+    FU_1 = -145605128.278391000000 
+    FU_2 = -6802067.077495960000 
+    FU_3 = 5.068109619186 
 	
-    FN_1 = 304913624.146318000000 
-    FN_2 = 11149601.682074400000 
-    FN_3 = 318.865232217330 
+    FN_1 = 293064803.630327000000 
+    FN_2 = 11034583.591939200000 
+    FN_3 = 320.478136498995 
     
     N_random = 3000
     num_iterations = 10
@@ -19,9 +19,9 @@ class global_var:
     k = 4
     MAE = 0.001
     diff = 0.03
-    test_prop = 0.2
+    test_prop = 0.3
     test_new = 5
-    initial_num = 482
+    initial_num = 106
     diff_max = diff
     testing_num = 138
 
@@ -30,8 +30,8 @@ class global_var:
     fail_ess = 0.0009
     fail_ene = 0.1
 
-    BatchSize = 1
-    Epochs = 45
+    BatchSize = 110
+    Epochs = 39
     LearningRate = 0.005
 
 
