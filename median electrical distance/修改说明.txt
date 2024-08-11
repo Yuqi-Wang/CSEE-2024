@@ -1,0 +1,21 @@
+文章写作
+1. 变压器二次约束
+2. 电压上下限约束存在
+3. 
+4. 
+
+算法方面
+1. ALP分三步：
+（1）sample according to the maximum uncertainty princeple
+（2）evaluate according to (3)
+（3）training after pareto dominance check
+2. 需要解决的问题
+（1）candidate有哪些，如何确定？
+（2）如何用GP进行prediction？
+（3）如何用新的sample set进行训练？
+
+
+算例方面
+1. 先试试不加CVaR的效果，然后对比一下增加以后的结果。但是，我们的电压偏移的似乎已经cover这个问题了。
+2. 试试yikeson-constraint与加权法的不同
+3. 比较不同的selection strategy
